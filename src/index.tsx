@@ -3,13 +3,49 @@ import ReactDOM from 'react-dom/client';
 import './index.css';
 import App from './App';
 import reportWebVitals from './reportWebVitals';
+import { RouterProvider, createHashRouter } from 'react-router-dom'
+import Footer from './components/footer';
+import Header from './components/header';
+import Login from './components/login';
+import Placebid from './components/placebid';
+import Body from './components/body';
+import UserContext from './utils/userContext';
 
 const root = ReactDOM.createRoot(
   document.getElementById('root') as HTMLElement
 );
+
+const appRouter = createHashRouter([
+  {
+    path: '/',
+    element: <App />,
+    children: [
+      {
+        path: '/',
+        element: <>
+          <Body />
+          <Footer />
+        </>
+      },
+      {
+        path: '/login',
+        element: <Login />
+      },
+      {
+        path: '/placebid',
+        element: <>
+          <Placebid />
+        </>
+      }
+    ]
+  }
+])
+
 root.render(
   <React.StrictMode>
-    <App />
+    <UserContext>
+      <RouterProvider router={appRouter} />
+    </UserContext>
   </React.StrictMode>
 );
 
