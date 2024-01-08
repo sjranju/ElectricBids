@@ -10,6 +10,8 @@ import Login from './components/login';
 import Placebid from './components/placebid';
 import Body from './components/body';
 import UserContext from './utils/userContext';
+import { Provider } from 'react-redux';
+import { store } from './store/appStore';
 
 const root = ReactDOM.createRoot(
   document.getElementById('root') as HTMLElement
@@ -43,9 +45,11 @@ const appRouter = createHashRouter([
 
 root.render(
   <React.StrictMode>
-    <UserContext>
-      <RouterProvider router={appRouter} />
-    </UserContext>
+    <Provider store={store}>
+      <UserContext>
+        <RouterProvider router={appRouter} />
+      </UserContext>
+    </Provider>
   </React.StrictMode>
 );
 
