@@ -5,17 +5,12 @@ import App from './App';
 import reportWebVitals from './reportWebVitals';
 import { RouterProvider, createHashRouter } from 'react-router-dom'
 import Footer from './components/footer';
-import Header from './components/header';
 import Login from './components/login';
 import Placebid from './components/placebid';
 import Body from './components/body';
+import BidHistory from './components/bidHistory';
+import useAuthListener from './utils/useAuthListener';
 import UserContext from './utils/userContext';
-import { Provider } from 'react-redux';
-import { store } from './store/appStore';
-
-const root = ReactDOM.createRoot(
-  document.getElementById('root') as HTMLElement
-);
 
 const appRouter = createHashRouter([
   {
@@ -35,21 +30,25 @@ const appRouter = createHashRouter([
       },
       {
         path: '/placebid',
-        element: <>
-          <Placebid />
-        </>
+        element: <Placebid />
+      },
+      {
+        path: '/bidhistory',
+        element: <BidHistory />
       }
     ]
   }
 ])
 
+const root = ReactDOM.createRoot(
+  document.getElementById('root') as HTMLElement
+);
+
 root.render(
   <React.StrictMode>
-    <Provider store={store}>
-      <UserContext>
-        <RouterProvider router={appRouter} />
-      </UserContext>
-    </Provider>
+    <UserContext>
+      <RouterProvider router={appRouter} />
+    </UserContext>
   </React.StrictMode>
 );
 
