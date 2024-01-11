@@ -73,7 +73,7 @@ const Body = () => {
                     {image}
                 </div>)}
             {/* ABout us*/}
-            <section className={`py-24 flex md:px-32 px-6 justify-center items-center bg-teal-50 `}>
+            <section className={`py-24 flex md:px-32 px-12 justify-center items-center bg-teal-50 `}>
                 <p ref={ref1} className={`text-gray-600 text-lg md:text-[22px] indent-6 font-semibold text-center transition-opacity delay-100 ease-in duration-800 ${isVisible1 ? "opacity-100" : "opacity-0"}`}>
                     Discover the power of our electricity bidding marketplace for sellers.
                     We provide a seamless business energy comparison service, ensuring the best prices for both business gas and electricity.
@@ -101,7 +101,7 @@ const Body = () => {
             </section >
 
             {/* Featured Bids Section */}
-            <section className="py-24 md:px-32 px-6 w-full bg-teal-50">
+            <section className="py-24 md:px-32 px-12 w-full bg-teal-50">
                 <h2 ref={ref2} className={`transition-opacity ease-in delay-100 duration-700 ${isVisible2 ? "opacity-100" : "opacity-0"} md:text-3xl text-2xl font-semibold mb-8`}>Featured Bids</h2>
                 {/* Featured bid cards go here */}
                 <div ref={ref3} className={`md:text-xl text-sm transition-opacity ease-in delay-100 duration-700 ${isVisible3 ? "opacity-100" : "opacity-0"} flex flex-col rounded`}>
