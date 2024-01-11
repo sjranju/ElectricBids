@@ -1,5 +1,6 @@
 {
   "name": "electricity_marketplace",
+  "homepage": "https://sjranju.github.io/ElectricBids/",
   "version": "0.1.0",
   "private": true,
   "dependencies": {
