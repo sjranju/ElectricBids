@@ -1,7 +1,7 @@
 {
   "files": {
     "main.css": "/ElectricBids/static/css/main.eaa75618.css",
-    "main.js": "/ElectricBids/static/js/main.6c785ca0.js",
+    "main.js": "/ElectricBids/static/js/main.bc9abc50.js",
     "static/js/787.0485463a.chunk.js": "/ElectricBids/static/js/787.0485463a.chunk.js",
     "static/media/energy1.jpg": "/ElectricBids/static/media/energy1.c0e16aa6dc8ea5a3ef8a.jpg",
     "static/media/energy5.jpg": "/ElectricBids/static/media/energy5.06cb06af66320b3e32fc.jpg",
@@ -10,11 +10,11 @@
     "static/media/ElectricBids1.png": "/ElectricBids/static/media/ElectricBids1.6ad8a8162c537b4d06f6.png",
     "index.html": "/ElectricBids/index.html",
     "main.eaa75618.css.map": "/ElectricBids/static/css/main.eaa75618.css.map",
-    "main.6c785ca0.js.map": "/ElectricBids/static/js/main.6c785ca0.js.map",
+    "main.bc9abc50.js.map": "/ElectricBids/static/js/main.bc9abc50.js.map",
     "787.0485463a.chunk.js.map": "/ElectricBids/static/js/787.0485463a.chunk.js.map"
   },
   "entrypoints": [
     "static/css/main.eaa75618.css",
-    "static/js/main.6c785ca0.js"
+    "static/js/main.bc9abc50.js"
   ]
 }
