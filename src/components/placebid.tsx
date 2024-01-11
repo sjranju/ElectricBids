@@ -10,7 +10,6 @@ const Placebid = () => {
     const [endTime, setEndTime] = useState<string>('')
     const [cost, setCost] = useState<string>('')
     const [error, setError] = useState<string>('')
-    console.log('user in placeBid', user)
     const [placeBidMutation, { data, isLoading, isError, error: errorPlaceBid, isSuccess }] = usePlaceBidMutation()
 
     const handleSubmitBid = async () => {
@@ -21,7 +20,6 @@ const Placebid = () => {
 
     const handleEndTimeValidation = (e: React.ChangeEvent<HTMLInputElement>) => {
         const hoursDiff = parseInt(e.target.value.substring(0, 2)) - parseInt(startTime.substring(0, 2))
-        console.log(e.target.value.substring(0, 2), startTime.substring(0, 2), hoursDiff)
         if (e.target.value === startTime || (hoursDiff <= 3 && hoursDiff > 0)) {
             setError('End Time must be at least 3 hours greater than startTime')
             setEndTime('')
@@ -32,8 +30,6 @@ const Placebid = () => {
         const minsDiff = (parseInt(e.target.value.substring(0, 2)) * 60) - (parseInt(startTime.substring(0, 2)) * 60)
 
     }
-
-    console.log(error)
 
     return (
         <div className="mt-16 flex flex-col items-center justify-center">

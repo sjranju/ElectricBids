@@ -31,7 +31,6 @@ export const api = createApi({
             async queryFn({ quantity, startTime, endTime, cost, user }) {
                 try {
                     if (user) {
-                        console.log('rtk', user, quantity)
                         const bidDocRef = doc(db, `AllBids/${user.uid}`)
                         const response = await getDoc(bidDocRef)
                         if (response.exists()) {

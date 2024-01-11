@@ -44,8 +44,6 @@ const BidHistory = () => {
         }
     }
 
-    console.log(allBids)
-
     return (
         <div className='mt-16 w-6/12 mx-auto'>
             {data !== 'doesNotExist' && data !== undefined ?

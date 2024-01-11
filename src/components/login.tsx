@@ -23,7 +23,6 @@ const Login = () => {
     const loginWithEmailAndPassword = async () => {
         await signInWithEmailAndPassword(auth, emailAddress, password)
             .then(userCredentials => {
-                console.log(userCredentials)
                 setUser(userCredentials.user)
                 navigate('/')
             })
@@ -38,7 +37,6 @@ const Login = () => {
             .then(async (user) => {
                 await updateProfile(user.user, { displayName: providerName })
                     .then(up => {
-                        console.log(user)
                         setUser(user.user)
                         navigate('/')
                     })
