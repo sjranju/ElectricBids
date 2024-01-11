@@ -1,9 +1,10 @@
-import { useEffect, useRef, useState } from 'react';
+import { useContext, useEffect, useRef, useState } from 'react';
 import { Link } from 'react-router-dom';
 import { useIsVisible } from '../utils/useIsVisible';
 import energy1 from "../images/energy1.jpg"
 import energy5 from "../images/energy5.jpg"
 import benefits from "../images/benefit2.jpg"
+import { userContext } from '../utils/userContext';
 
 const Body = () => {
     const ref1 = useRef<HTMLParagraphElement | null>(null);
@@ -17,6 +18,7 @@ const Body = () => {
 
     const [timer, setTimer] = useState<number>(3600)
     const [imagCarousel, setImageCarousel] = useState(0)
+    const { user } = useContext(userContext)
 
     const imageGallery = [<div className='relative w-full flex flex-col justify-center items-center mx-auto'>
         <img src={energy1} className='w-full h-[550px] object-fill'></img>
@@ -105,7 +107,7 @@ const Body = () => {
                 <h2 ref={ref2} className={`transition-opacity ease-in delay-100 duration-700 ${isVisible2 ? "opacity-100" : "opacity-0"} md:text-3xl text-2xl font-semibold mb-8`}>Featured Bids</h2>
                 {/* Featured bid cards go here */}
                 <div ref={ref3} className={`md:text-xl text-sm transition-opacity ease-in delay-100 duration-700 ${isVisible3 ? "opacity-100" : "opacity-0"} flex flex-col rounded`}>
-                    <Link to='/placeBid' className="font-semibold mb-2 cursor-pointe text-red-600 hover:text-slate-500">Energy exhange 2.0 - 11/01/2024 12 PM GMT <span className=' text-red-500'> Closes in {formatTime(timer)}</span></Link>
+                    <Link to={`${user ? '/placeBid' : '/login'}`} className="font-semibold mb-2 cursor-pointe text-red-600 hover:text-slate-500">Energy exhange 2.0 - 11/01/2024 12 PM GMT <span className=' text-red-500'> Closes in {formatTime(timer)}</span></Link>
                     <a className="font-semibold mb-2 cursor-pointer hover:text-orange-600">Energy exhange 2.1 - 26/01/2024 06 AM GMT</a>
                     <a className="font-semibold mb-2 cursor-pointer hover:text-orange-600">Energy exhange 2.2 - 06/02/2024 04 PM GMT</a>
                     {/* Repeat for other featured bids */}
