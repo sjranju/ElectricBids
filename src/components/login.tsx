@@ -4,7 +4,7 @@ import { FcGoogle } from 'react-icons/fc'
 import { auth } from "../utils/firebase";
 import { useNavigate } from "react-router-dom";
 import { userContext } from "../utils/userContext";
-import energy3 from "../../public/images/energy3.jpg"
+import energy3 from "../images/energy3.jpg"
 
 const provider = new GoogleAuthProvider();
 provider.setCustomParameters({

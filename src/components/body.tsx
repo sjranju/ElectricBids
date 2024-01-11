@@ -1,9 +1,9 @@
 import { useEffect, useRef, useState } from 'react';
 import { Link } from 'react-router-dom';
 import { useIsVisible } from '../utils/useIsVisible';
-import energy1 from "../../public/images/energy1.jpg"
-import energy5 from "../../public/images/energy5.jpg"
-import benefits from "../../public/images/benefit2.jpg"
+import energy1 from "../images/energy1.jpg"
+import energy5 from "../images/energy5.jpg"
+import benefits from "../images/benefit2.jpg"
 
 const Body = () => {
     const ref1 = useRef<HTMLParagraphElement | null>(null);

@@ -5,7 +5,7 @@ import { AiOutlineUser } from 'react-icons/ai'
 import { signOut } from 'firebase/auth'
 import { auth } from '../utils/firebase'
 import useAuthListener from '../utils/useAuthListener'
-import ElectricBids1 from '../../public/images/ElectricBids1.png'
+import ElectricBids1 from '../images/ElectricBids1.png'
 
 const Header = () => {
     const user = useAuthListener()
