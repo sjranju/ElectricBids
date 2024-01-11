@@ -21,17 +21,17 @@ const Body = () => {
     const { user } = useContext(userContext)
 
     const imageGallery = [<div className='relative w-full flex flex-col justify-center items-center mx-auto'>
-        <img src={energy1} className='w-full h-[550px] object-fill'></img>
-        <div className="absolute right-0 top-0 py-20 px-6 bg-yellow-800 bg-opacity-65 border-l-4 border-yellow-200 rounded-sm text-white">
-            <h1 className="text-2xl font-bold">Welcome to Electricity Marketplace</h1>
-            <p className="text-md">Empowering Energy Trading for a Sustainable Future</p>
+        <img src={energy1} className='w-full h-72 md:h-[550px] object-fill'></img>
+        <div className="absolute right-0 top-0 py-12 md:py-20 px-3 md:px-6 bg-yellow-800 bg-opacity-65 border-l-4 border-yellow-200 rounded-sm text-white">
+            <h1 className="text-lg md:text-2xl font-bold text-yellow-100">Welcome to Electricity Marketplace</h1>
+            <p className="text-sm md:text-base">Empowering Energy Trading for a Sustainable Future</p>
         </div>
     </div>,
     <div className='relative w-full flex flex-col justify-center items-center mx-auto'>
-        <img src={energy5} className='w-full h-[550px] object-fill'></img>
-        <div className="absolute right-0 bottom-0 bg-gray-500 py-20 px-6 bg-opacity-80 border-l-4 border-teal-200 rounded-sm text-white">
-            <h1 className="text-2xl font-bold">ElectricBids to extend its platform in France</h1>
-            <p className="text-md after:border-b-4 after:border-teal-200">Empowering Energy Trading for a Sustainable Future</p>
+        <img src={energy5} className='w-full h-72 md:h-[550px] object-fill'></img>
+        <div className="absolute right-0 bottom-0 bg-gray-500 py-12 md:py-20 px-3 md:px-6 bg-opacity-80 border-l-4 border-teal-200 rounded-sm text-white">
+            <h1 className="text-lg md:text-2xl font-bold text-teal-100">ElectricBids to extend its platform in France</h1>
+            <p className="text-sm md:text-base after:border-b-4 after:border-teal-200">Empowering Energy Trading for a Sustainable Future</p>
         </div>
     </div>]
 
@@ -92,7 +92,7 @@ const Body = () => {
                     </div>
                     <div className="">
                         <h2 className="md:text-3xl text-2xl font-semibold mb-6">Benefits of Joining</h2>
-                        <div className="flex flex-col space-y-4 text-gray-600 font-semibold md:text-xl text-sm">
+                        <div className="flex flex-col space-y-4 text-gray-600 font-semibold md:text-xl text-base">
                             <div>Efficient and Transparent Energy Trading</div>
                             <div>Connect with Reputable Electricity Providers</div>
                             <div>Maximize Your Revenue Potential</div>
@@ -106,7 +106,7 @@ const Body = () => {
             <section className="py-24 md:px-32 px-10 w-full bg-teal-50">
                 <h2 ref={ref2} className={`transition-opacity ease-in delay-100 duration-700 ${isVisible2 ? "opacity-100" : "opacity-0"} md:text-3xl text-2xl font-semibold mb-8`}>Featured Bids</h2>
                 {/* Featured bid cards go here */}
-                <div ref={ref3} className={`md:text-xl text-sm transition-opacity ease-in delay-100 duration-700 ${isVisible3 ? "opacity-100" : "opacity-0"} flex flex-col rounded`}>
+                <div ref={ref3} className={`md:text-xl text-base transition-opacity ease-in delay-100 duration-700 ${isVisible3 ? "opacity-100" : "opacity-0"} flex flex-col rounded`}>
                     <Link to={`${user ? '/placeBid' : '/login'}`} className="font-semibold mb-2 cursor-pointe text-red-600 hover:text-slate-500">Energy exhange 2.0 - 11/01/2024 12 PM GMT <span className=' text-red-500'> Closes in {formatTime(timer)}</span></Link>
                     <a className="font-semibold mb-2 cursor-pointer hover:text-orange-600">Energy exhange 2.1 - 26/01/2024 06 AM GMT</a>
                     <a className="font-semibold mb-2 cursor-pointer hover:text-orange-600">Energy exhange 2.2 - 06/02/2024 04 PM GMT</a>
