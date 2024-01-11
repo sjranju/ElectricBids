@@ -1,15 +1,15 @@
 {
   "files": {
-    "main.css": "/static/css/main.fbd82207.css",
-    "main.js": "/static/js/main.9196179f.js",
-    "static/js/787.0485463a.chunk.js": "/static/js/787.0485463a.chunk.js",
-    "index.html": "/index.html",
-    "main.fbd82207.css.map": "/static/css/main.fbd82207.css.map",
-    "main.9196179f.js.map": "/static/js/main.9196179f.js.map",
-    "787.0485463a.chunk.js.map": "/static/js/787.0485463a.chunk.js.map"
+    "main.css": "/ElectricBids/static/css/main.fbd82207.css",
+    "main.js": "/ElectricBids/static/js/main.97d766c2.js",
+    "static/js/787.0485463a.chunk.js": "/ElectricBids/static/js/787.0485463a.chunk.js",
+    "index.html": "/ElectricBids/index.html",
+    "main.fbd82207.css.map": "/ElectricBids/static/css/main.fbd82207.css.map",
+    "main.97d766c2.js.map": "/ElectricBids/static/js/main.97d766c2.js.map",
+    "787.0485463a.chunk.js.map": "/ElectricBids/static/js/787.0485463a.chunk.js.map"
   },
   "entrypoints": [
     "static/css/main.fbd82207.css",
-    "static/js/main.9196179f.js"
+    "static/js/main.97d766c2.js"
   ]
 }
