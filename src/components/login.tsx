@@ -59,10 +59,10 @@ const Login = () => {
 
     return (
         <div className="flex mx-auto w-7/12 h-[500px] shadow-xl space-x-8 mt-16 rounded-sm pr-8">
-            <div className="w-7/12">
-                <img src={energy3} className="hidden md:block w-full h-full object-fill rounded-sm opacity-90" alt="energy"></img>
+            <div className=" hidden md:block w-7/12">
+                <img src={energy3} className=" w-full h-full object-fill rounded-sm opacity-90" alt="energy"></img>
             </div>
-            <div className="flex flex-col w-5/12">
+            <div className="flex flex-col md:w-5/12 w-full">
                 <div className="flex flex-col mt-4 space-y-6 ">
                     <div className="text-center font-bold text-lg text-blue-700 mb-2">LOGIN</div>
                     <input type="text" name="emailAddress" placeholder="Enter your Email ID" value={emailAddress} onChange={(e) => setEmailAddress(e.target.value)}
