@@ -11,6 +11,7 @@ import Body from './components/body';
 import BidHistory from './components/bidHistory';
 import useAuthListener from './utils/useAuthListener';
 import UserContext from './utils/userContext';
+import { SkeletonTheme } from 'react-loading-skeleton';
 
 const appRouter = createHashRouter([
   {
@@ -47,7 +48,9 @@ const root = ReactDOM.createRoot(
 root.render(
   <React.StrictMode>
     <UserContext>
-      <RouterProvider router={appRouter} />
+      <SkeletonTheme baseColor="#ebebeb" highlightColor="#f5f5f5">
+        <RouterProvider router={appRouter} />
+      </SkeletonTheme>
     </UserContext>
   </React.StrictMode>
 );

@@ -42,14 +42,14 @@ const Placebid = () => {
                         </div>
                     </div>
                     : <>
-                        <div className='font-semibold text-2xl mb-8 text-center '>Ready to place your bid?</div>
-                        <div className='flex flex-col space-y-4 shadow-lg px-4 lg:px-20 py-8 w-1/2 justify-center items-start'>
+                        <div className='font-semibold text-lg md:text-2xl mb-8 text-center '>Ready to place your bid?</div>
+                        <div className='flex flex-col space-y-4 shadow-lg px-4 lg:px-20 py-8 md:w-1/2 w-2/3 justify-center items-start text-sm md:text-lg'>
                             <div className="flex space-x-2 items-center w-full pb-2">
                                 <label className='font-semibold w-3/12'>
-                                    Quantity <span className='text-sm'> (MWh) </span>:
+                                    Quantity <span className='text-xs md:text-sm'> (MWh) </span>:
                                 </label>
                                 <input type='text' value={quantity} onChange={(e) => setQuantity(e.target.value)}
-                                    placeholder='Megawatt-hours (MWh)' className='after:content-[MWh] outline-none w-7/12 h-8 placeholder:text-sm px-2  border border-b-orange-500 rounded-sm focus:border-b focus:border-b-orange-300'></input>
+                                    placeholder='Megawatt-hours (MWh)' className='after:content-[MWh] outline-none w-7/12 h-8 placeholder:text-xs md:placeholder:text-sm px-2  border border-b-orange-500 rounded-sm focus:border-b focus:border-b-orange-300'></input>
                             </div>
                             <div className="flex space-x-2 items-center w-full pb-2">
                                 <label className='font-semibold w-3/12'>
@@ -75,10 +75,10 @@ const Placebid = () => {
                             </div>
                             <div className="flex space-x-2 items-center w-full pb-6">
                                 <label className='font-semibold w-3/12'>
-                                    Cost per MWh <span className='text-sm'> (EUR)</span>:
+                                    Cost per MWh <span className='text-xs md:text-sm'> (EUR)</span>:
                                 </label>
                                 <input type='text' value={cost} onChange={(e) => setCost(e.target.value)}
-                                    placeholder='Euros(EUR/MWh)' className='outline-none w-7/12 h-8 placeholder:text-sm px-2 border border-b-orange-500 rounded-sm focus:border-b focus:border-b-orange-300'></input>
+                                    placeholder='Euros(EUR/MWh)' className='outline-none w-7/12 h-8 placeholder:text-xs md:placeholder:text-sm px-2 border border-b-orange-500 rounded-sm focus:border-b focus:border-b-orange-300'></input>
                             </div >
                             {isError &&
                                 <div className='text-sm text-red-600'>
@@ -86,7 +86,7 @@ const Placebid = () => {
                                 </div>
                             }
                             <button onClick={() => handleSubmitBid()}
-                                className='flex justify-center items-center w-1/3 mx-auto px-2 py-2 rounded-sm text-white text-lg font-semibold bg-orange-700 hover:bg-orange-500 hover:text-white hover:border-none'>
+                                className='flex justify-center items-center w-1/3 mx-auto px-2 py-2 rounded-sm text-white text-sm md:text-lg font-semibold bg-orange-700 hover:bg-orange-500 hover:text-white hover:border-none'>
                                 Submit
                             </button>
                         </div >

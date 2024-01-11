@@ -91,8 +91,8 @@ const Body = () => {
                         <img src={benefits} className='rounded-lg h-[300px]'></img>
                     </div>
                     <div className="">
-                        <h2 className="md:text-3xl text-2xl font-semibold mb-8">Benefits of Joining</h2>
-                        <div className="flex flex-col space-y-4 text-gray-600 font-semibold text-lg">
+                        <h2 className="md:text-3xl text-2xl font-semibold mb-6">Benefits of Joining</h2>
+                        <div className="flex flex-col space-y-4 text-gray-600 font-semibold md:text-xl text-sm">
                             <div>Efficient and Transparent Energy Trading</div>
                             <div>Connect with Reputable Electricity Providers</div>
                             <div>Maximize Your Revenue Potential</div>
