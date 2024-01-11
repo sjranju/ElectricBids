@@ -5,6 +5,7 @@ import { AiOutlineUser } from 'react-icons/ai'
 import { signOut } from 'firebase/auth'
 import { auth } from '../utils/firebase'
 import useAuthListener from '../utils/useAuthListener'
+import ElectricBids1 from '../../public/images/ElectricBids1.png'
 
 const Header = () => {
     const user = useAuthListener()
@@ -30,7 +31,7 @@ const Header = () => {
         <div className='shadow-lg py-4 text-zinc-950 font-semibold text-sm md:text-md px-32'>
             <div className=' flex flex-row items-center justify-between'>
                 <div className="">
-                    <Link to='/'><img src='/images/ElectricBids1.png' className='w-14 rounded-sm'></img></Link>
+                    <Link to='/'><img src={ElectricBids1} className='w-14 rounded-sm'></img></Link>
                 </div>
                 <div className='flex flex-row items-center justify-center space-x-8'>
                     {user ?

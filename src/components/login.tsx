@@ -4,6 +4,7 @@ import { FcGoogle } from 'react-icons/fc'
 import { auth } from "../utils/firebase";
 import { useNavigate } from "react-router-dom";
 import { userContext } from "../utils/userContext";
+import energy3 from "../../public/images/energy3.jpg"
 
 const provider = new GoogleAuthProvider();
 provider.setCustomParameters({
@@ -61,7 +62,7 @@ const Login = () => {
     return (
         <div className="flex mx-auto w-7/12 h-[500px] shadow-xl space-x-8 mt-16 rounded-sm pr-8">
             <div className="w-7/12">
-                <img src="/images/energy3.jpg" className="hidden md:block w-full h-full object-fill rounded-sm opacity-90" alt="energy"></img>
+                <img src={energy3} className="hidden md:block w-full h-full object-fill rounded-sm opacity-90" alt="energy"></img>
             </div>
             <div className="flex flex-col w-5/12">
                 <div className="flex flex-col mt-4 space-y-6 ">

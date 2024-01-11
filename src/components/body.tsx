@@ -1,6 +1,9 @@
 import { useEffect, useRef, useState } from 'react';
 import { Link } from 'react-router-dom';
 import { useIsVisible } from '../utils/useIsVisible';
+import energy1 from "../../public/images/energy1.jpg"
+import energy5 from "../../public/images/energy5.jpg"
+import benefits from "../../public/images/benefit2.jpg"
 
 const Body = () => {
     const ref1 = useRef<HTMLParagraphElement | null>(null);
@@ -16,14 +19,14 @@ const Body = () => {
     const [imagCarousel, setImageCarousel] = useState(0)
 
     const imageGallery = [<div className='relative w-full flex flex-col justify-center items-center mx-auto'>
-        <img src='/images/energy1.jpg' className='w-full h-[550px] object-fill'></img>
+        <img src={energy1} className='w-full h-[550px] object-fill'></img>
         <div className="absolute right-0 top-0 py-20 px-6 bg-yellow-800 bg-opacity-65 border-l-4 border-yellow-200 rounded-sm text-white">
             <h1 className="text-2xl font-bold">Welcome to Electricity Marketplace</h1>
             <p className="text-md">Empowering Energy Trading for a Sustainable Future</p>
         </div>
     </div>,
     <div className='relative w-full flex flex-col justify-center items-center mx-auto'>
-        <img src='/images/energy5.jpg' className='w-full h-[550px] object-fill'></img>
+        <img src={energy5} className='w-full h-[550px] object-fill'></img>
         <div className="absolute right-0 bottom-0 bg-gray-500 py-20 px-6 bg-opacity-80 border-l-4 border-teal-200 rounded-sm text-white">
             <h1 className="text-2xl font-bold">ElectricBids to extend its platform in France</h1>
             <p className="text-md after:border-b-4 after:border-teal-200">Empowering Energy Trading for a Sustainable Future</p>
@@ -83,7 +86,7 @@ const Body = () => {
             < section className="py-24 w-10/12" >
                 <div className="flex space-x-24 items-center">
                     <div className="">
-                        <img src='/images/benefit2.jpg' className='rounded-lg h-[300px]'></img>
+                        <img src={benefits} className='rounded-lg h-[300px]'></img>
                     </div>
                     <div className="">
                         <h2 className="text-3xl font-semibold mb-8">Benefits of Joining</h2>
