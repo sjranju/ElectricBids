@@ -58,7 +58,7 @@ const Login = () => {
     }
 
     return (
-        <div className="flex mx-auto w-7/12 h-[500px] shadow-xl space-x-8 mt-16 rounded-sm pr-8">
+        <div className="flex mx-auto w-7/12 h-[500px] shadow-xl md:space-x-8 mt-16 rounded-sm md:pr-8 p-6">
             <div className=" hidden md:block w-7/12">
                 <img src={energy3} className=" w-full h-full object-fill rounded-sm opacity-90" alt="energy"></img>
             </div>
