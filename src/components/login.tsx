@@ -33,16 +33,20 @@ const Login = () => {
     }
 
     const signUpWithEmailAndPassword = async () => {
-        await createUserWithEmailAndPassword(auth, emailAddress, password)
-            .then(async (user) => {
-                await updateProfile(user.user, { displayName: providerName })
-                    .then(up => {
-                        setUser(user.user)
-                        navigate('/')
-                    })
-                    .catch(error => setError(error.message.replace('Firebase:', '')))
-            })
-            .catch(error => setError(error.message.replace('Firebase:', '')))
+        if (providerName === '' || providerName === ' ') {
+            setError('Provider Name is required')
+        } else {
+            await createUserWithEmailAndPassword(auth, emailAddress, password)
+                .then(async (user) => {
+                    await updateProfile(user.user, { displayName: providerName })
+                        .then(up => {
+                            setUser(user.user)
+                            navigate('/')
+                        })
+                        .catch(error => setError(error.message.replace('Firebase:', '')))
+                })
+                .catch(error => setError(error.message.replace('Firebase:', '')))
+        }
     }
 
     const gmailLoginWithEmailAndPassword = async () => {

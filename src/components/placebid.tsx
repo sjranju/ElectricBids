@@ -13,8 +13,14 @@ const Placebid = () => {
     const [placeBidMutation, { data, isLoading, isError, error: errorPlaceBid, isSuccess }] = usePlaceBidMutation()
 
     const handleSubmitBid = async () => {
+
         if (user) {
-            await placeBidMutation({ quantity: parseInt(quantity), startTime, endTime, cost: parseFloat(cost), user })
+
+            if (quantity && startTime && endTime && cost) {
+                await placeBidMutation({ quantity: parseInt(quantity), startTime, endTime, cost: parseFloat(cost), user })
+            } else {
+                setError('All fields are required to be filled')
+            }
         }
     }
 
@@ -67,8 +73,8 @@ const Placebid = () => {
                                 </label>
                                 <div className='block w-7/12'>
                                     <input type='time' value={endTime} onChange={(e) => { handleEndTimeValidation(e) }}
-                                        className={`w-full px-2 py-1 border border-b-orange-500 rounded-sm ${error ? 'border-red-500 outline-none' : 'focus:outline-none'}`} />
-                                    <p className={`${error ? 'block' : 'hidden'} text-xs text-red-600`}>
+                                        className={`w-full px-2 py-1 border border-b-orange-500 rounded-sm ${error.includes('End Time') ? 'border-red-500 outline-none' : 'focus:outline-none'}`} />
+                                    <p className={`${error.includes('End Time') ? 'block' : 'hidden'} text-xs text-red-600`}>
                                         {error}
                                     </p>
                                 </div>
@@ -84,6 +90,10 @@ const Placebid = () => {
                                 <div className='text-sm text-red-600'>
                                     {errorPlaceBid as string}
                                 </div>
+                            }
+                            {
+                                error.includes('All fields') &&
+                                <p className='text-red-600 text-sm text-center mx-auto'>{error}</p>
                             }
                             <button onClick={() => handleSubmitBid()}
                                 className='flex justify-center items-center w-1/3 mx-auto px-2 py-2 rounded-sm text-white text-sm md:text-lg font-semibold bg-orange-700 hover:bg-orange-500 hover:text-white hover:border-none'>
